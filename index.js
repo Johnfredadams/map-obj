@@ -10,7 +10,7 @@ const isObjectCustom = value =>
 	!(value instanceof Date);
 
 const mapObject = (object, mapper, options, isSeen = new WeakMap()) => {
-	options = Object.assign({deep: false,target: {}}, options});
+	options = Object.assign({deep: false,target: {}}, options);
 
 	if (isSeen.has(object)) {
 		return isSeen.get(object);
